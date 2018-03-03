@@ -6,7 +6,27 @@
         xmlns:local="clr-namespace:SerialPortOscilloscope"
         mc:Ignorable="d"
         Title="SerialPortOscilloscope" Height="768" Width="1024">
-    <Grid>
-        
+    <Grid Name="mainForm">
+        <GroupBox Header="Serial Port Configuration" Name="_gbSerialPortSetting" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0">
+            <Grid Width="{Binding ElementName=mainForm, Path=ActualWidth}">
+                <Grid.RowDefinitions>
+                    <RowDefinition MinHeight="25" Height="25"></RowDefinition>
+                    <RowDefinition MinHeight="1" Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MinWidth="60px" Width="100px"></ColumnDefinition>
+                    <ColumnDefinition Width="150px" MinWidth="120px"></ColumnDefinition>
+                    <ColumnDefinition  Width="40" ></ColumnDefinition>
+                    <ColumnDefinition  MinWidth="60px" Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="150px" MinWidth="120px"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Name="_lblSerialPortComm">Serial Port:</Label>
+                <ComboBox Grid.Row="0" Grid.Column="1" Name="_cbSerialPortComm" Height="20px" Width="100px"></ComboBox>
+                <Label Grid.Row="0" Grid.Column="3">Baud Rate:</Label>
+                <ComboBox Grid.Row="0" Grid.Column="4" Name="_cbSerialBaudRate" Height="20px" Width="100px"></ComboBox>
+
+
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
